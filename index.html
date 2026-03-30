@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PrompLint - AI Security Firewall</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="background-elements">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="orb orb-3"></div>
+    </div>
+    
+    <main class="glass-container">
+        <header>
+            <div class="logo-area">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="logo-icon"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                <h1>PrompLint</h1>
+            </div>
+            <div class="status-badge active">
+                <span class="pulse-dot"></span>
+                AI Firewall Active
+            </div>
+        </header>
+
+        <section class="input-section">
+            <label for="prompt-input">Enter Prompt for AI:</label>
+            <div class="input-wrapper">
+                <textarea id="prompt-input" rows="4" placeholder="Type your prompt here... (Try words like 'jailbreak' or 'bypass')"></textarea>
+                <button id="send-btn">
+                    <span>Send</span>
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+                </button>
+            </div>
+        </section>
+
+        <section class="response-section" id="response-container">
+            <div class="risk-indicator" id="risk-indicator">
+                <span class="label">Status:</span>
+                <span class="value" id="risk-value">Waiting for input...</span>
+            </div>
+            <div class="response-box" id="response-box">
+                <p class="placeholder-text">AI response will appear here...</p>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
